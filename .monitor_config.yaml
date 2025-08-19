@@ -1,0 +1,10 @@
+# A list of file or directory patterns to ignore during analysis.
+# Uses standard .gitignore syntax.
+ignore_patterns:
+  - '*/__pycache__/*'
+  - '*.pyc'
+  - 'code_monitor/*' # Ignore the monitoring agent's own code
+
+# A list of file extensions to analyze.
+file_extensions_to_check:
+  - '.py'

@@ -1,0 +1,52 @@
+repos:
+  - repo: local
+    hooks:
+      - id: code-change-analyzer
+        name: Analyze Code Changes
+        entry: python -m code_monitor.main --staged-only
+        language: system
+        types: [python]
+        pass_filenames: false```
+**Note the change:** `entry: python -m code_monitor.main --staged-only`. This ensures we run the script as a module and only check staged files for the hook.
+
+---
+
+### **How to Run the Advanced Agent**
+
+1.  **Installation:**
+    Make sure all the files are in place as described above. Then, open your terminal in the root of the `temp_useless` directory and install the dependencies.
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+2.  **Make Some Code Changes:**
+    Let's simulate a real scenario.
+    *   **Modify an existing file:** Open `test.py` and change the `hello` function.
+    *   **Add a new file:** Create a new file `new_feature.py` with a new class in it.
+    *   **Delete an object:** Remove a function or class from one of the files.
+
+3.  **Run Manually (to see ALL changes):**
+    Before staging anything, run this command to see all your work-in-progress:
+    ```bash
+    python -m code_monitor.main
+    ```
+    This will give you a report of every modification, addition, and deletion across all non-staged files.
+
+4.  **Run with `pre-commit` (to see STAGED changes):**
+    a. Stage your changes:
+    ```bash
+    git add test.py
+    git add new_feature.py
+    ```
+
+    b. Install the hook (you only need to do this once):
+    ```bash
+    pre-commit install
+    ```
+
+    c. Now, try to commit:
+    ```bash
+    git commit -m "feat: updated test file and added new feature"
+    ```
+
+    Before the commit is finalized, the agent will run automatically and show you a detailed report of the **staged** changes, listing the functions and classes that were affected.
