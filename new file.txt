@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-hello this file is changed
-=======
-i changed this file
->>>>>>> 8ad40efa4fe429096d18a37bd0019c7dc62dbd90
+the file is modified
