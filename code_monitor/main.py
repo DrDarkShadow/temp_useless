@@ -9,6 +9,24 @@ except ImportError:
 
 init(autoreset=True)
 
+def add_numbers(a: int, b: int) -> int:
+    """
+    Adds two integers and returns the result.
+
+    Parameters:
+        a (int): The first number.
+        b (int): The second number.
+
+    Returns:
+        int: The sum of a and b.
+
+    Example:
+        >>> add_numbers(3, 5)
+        8
+    """
+    return a + b
+
+
 def print_analysis(results: dict):
     """Prints the analysis results in a readable format."""
     if not results:
