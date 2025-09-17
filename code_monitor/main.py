@@ -27,6 +27,9 @@ def add_numbers(a: int, b: int) -> int:
     return a + b
 
 
+def greet(name):
+	print(name)
+
 def print_analysis(results: dict):
     """Prints the analysis results in a readable format."""
     if not results:
