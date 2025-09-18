@@ -27,8 +27,22 @@ def add_numbers(a: int, b: int) -> int:
     return a + b
 
 
-def greet(name):
-	print(name)
+def sub_numbers(a: int, b: int) -> int:
+    """
+    Substract two integers and returns the result.
+
+    Parameters:
+        a (int): The first number.
+        b (int): The second number.
+
+    Returns:
+        int: The diff of a and b.
+
+    Example:
+        >>> sub_numbers(5, 3)
+        2
+    """
+    return a - b
 
 def print_analysis(results: dict):
     """Prints the analysis results in a readable format."""
