@@ -22,3 +22,6 @@ def get_functions_and_classes(code_content: str) -> Dict[str, Dict[str, Any]]:
                 "end_line": node.end_lineno
             }
     return objects
+
+def hello(name):
+    print(name)
