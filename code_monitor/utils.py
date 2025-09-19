@@ -25,3 +25,28 @@ def get_functions_and_classes(code_content: str) -> Dict[str, Dict[str, Any]]:
 
 def hello(name):
     print(name)
+
+
+def calculate_fibonacci(n):
+    """
+    Calculates the n-th Fibonacci number using an iterative approach.
+
+    This function is designed to be a clear example of a new, distinct piece of logic
+    added to test the documentation agent's ability to intelligently place
+    new documentation snippets.
+
+    Args:
+        n (int): The position in the Fibonacci sequence.
+
+    Returns:
+        int: The n-th Fibonacci number.
+    """
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
