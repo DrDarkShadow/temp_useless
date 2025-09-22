@@ -24,22 +24,22 @@ class RepoAnalyzer:
                 return True
         return False
 
-    def sub_num(a: int, b: int) -> int:
-    """
-    Subtracts the second integer from the first.
+    def sub_num(self, a: int, b: int) -> int:
+        """
+        Subtracts the second integer from the first.
 
-    Parameters:
-        a (int): The number from which `b` will be subtracted.
-        b (int): The number to subtract from `a`.
+        Parameters:
+            a (int): The number from which `b` will be subtracted.
+            b (int): The number to subtract from `a`.
 
-    Returns:
-        int: The result of subtracting b from a.
+        Returns:
+            int: The result of subtracting b from a.
 
-    Example:
-        >>> sub_num(10, 3)
-        7
-    """
-    return a - b
+        Example:
+            >>> sub_num(10, 3)
+            7
+        """
+        return a - b
     
     def calculate_fibonacci(n):
     """
