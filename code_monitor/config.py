@@ -12,5 +12,21 @@ class MonitorConfig:
                 config = yaml.safe_load(f)
                 self.ignore_patterns = config.get('ignore_patterns', [])
                 self.file_extensions = config.get('file_extensions_to_check', ['.py'])
+    def sub_num(self, a: int, b: int) -> int:
+        """
+        Subtracts the second integer from the first.
+
+        Parameters:
+            a (int): The number from which `b` will be subtracted.
+            b (int): The number to subtract from `a`.
+
+        Returns:
+            int: The result of subtracting b from a.
+
+        Example:
+            >>> sub_num(10, 3)
+            7
+        """
+        return a - b
 
 CONFIG = MonitorConfig()
