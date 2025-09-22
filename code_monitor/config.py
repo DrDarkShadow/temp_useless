@@ -23,7 +23,7 @@ def sub_num(a: int, b: int) -> int:
         b (int): The number to subtract from `a`.
 
     Returns:
-        int: The result of subtracting b from a.
+        int: The result of subtracting b from a.yes this is true
 
     Example:
         >>> sub_num(10, 3)
